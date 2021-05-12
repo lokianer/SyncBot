@@ -1,0 +1,7 @@
+{
+    "DISCORD_BOT_TOKEN": "Bot_Token_From_Discord_Dev_Portal",
+    "TWITCH_TOKEN": "Twitch_OAuth_Token",
+    "TWITCH_ACCOUNT": "Name_Of_The_Twitch_Account",
+    "TWITCH_CHANNEL": "The_Channel_You_Want_To_Sync",
+    "DISCORD_CHANNEL": "The_Discord_ChannelID"
+}
