@@ -44,5 +44,23 @@ function onMessageHandler(target, context, msg, self) {
     .catch((error) => {
       console.log(error);
     })
-
 };
+
+discord_client.on("message", function (message) {
+  let sendMessage = "";
+  if (message.author.bot) return;
+  if (!message?.content?.startsWith(config.PREFIX)) return;
+  if (!message?.channel?.id === config.DISCORD_CHANNEL) return;
+  const commandBody = message?.content?.slice(config.PREFIX.length);
+  const args = commandBody?.split(' ');
+  args.forEach(element => {
+    sendMessage += element + " ";
+  });
+  twitch_client.say(config.TWITCH_CHANNEL, `${message?.author?.username} schreibt: ${sendMessage}`)
+    .then((response) => {
+      console.log(`${message?.author?.username} schreibt: ${sendMessage}`);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+})
