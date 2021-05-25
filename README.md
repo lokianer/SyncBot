@@ -7,7 +7,6 @@ With `node index.js`, you can start the bot. Before that make sure, you create a
 ## What is needed?
 ### Dependencies
 * discord.js: "^12.5.3"
-* dotenv: "^9.0.2",
 * nodemon: "^2.0.7",
 * tmi.js: "^1.8.3"
 
